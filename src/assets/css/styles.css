@@ -338,3 +338,82 @@ margin-right: 40%;
 .aboutMe span{
     color: #80669f;
 }
+/* form create projects */
+.container h2{
+  text-align: center;
+  font-family: yanone;
+  font-size: 1.9em;
+}
+
+.container form{
+  width: 400px;
+  margin: 20px auto;
+  font-family: yanone;
+}
+.container form label{
+  display: block;
+  width: 50%;
+  margin: 10px 0px;
+
+}
+
+.container form input[type='text'],
+.container form input[type='number'],
+.container form input[type='file'],
+.container textarea{
+  width: 100%;
+    padding: 5px 10px;
+    margin: 0px 0px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+.container form input[type='file']{
+  border: none;
+  cursor: pointer;
+}
+
+.container form input[type='submit']{
+  display: block;
+  background-color: #ac20aa;
+  padding: 5px 10px;
+  margin: 20px auto;
+  transition: all 0.5s;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.container form input:disabled[type='submit']{
+  display: block;
+  background-color: #f7eff6;
+  padding: 5px 10px;
+  margin: 20px auto;
+  transition: all 0.5s;
+  cursor: not-allowed;
+  color: rgb(212, 205, 205);
+}
+
+.container form span{
+  display: inline-block;
+  color: red;
+  margin-top: 3px ;
+}
+/* menssaje form success or failed */
+.messaje{
+  padding: 5px 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: white;
+  font-family: yanone;
+  border-radius: 5px;
+  margin: 10px;
+}
+.messaje a{
+  color: #451c45;
+  text-decoration: none;
+}
+.messaje.success{
+  background: rgb(2, 190, 2);
+}
+.messaje.failed{
+  background: red;
+}
