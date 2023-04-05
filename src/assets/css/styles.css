@@ -24,7 +24,7 @@
     margin: 0px auto;
 }
 body{
-    background: url(../img/pattern.png);
+    background: linear-gradient(90deg, rgba(204,194,215,0.02573529411764708) 0%, rgba(206,206,241,1) 100%),url(../img/triangulo.png);
     background-attachment: fixed;
 }
 .grid{
@@ -148,7 +148,7 @@ body{
 img, svg {
 	display: block;
 	overflow: visible;
-	pointer-events: none;
+	
 }
 
 .group:before,
@@ -410,10 +410,78 @@ margin-right: 40%;
 .messaje a{
   color: #451c45;
   text-decoration: none;
+  cursor: pointer;
 }
 .messaje.success{
   background: rgb(2, 190, 2);
 }
 .messaje.failed{
   background: red;
+}
+/* proyectos */
+.containerProyectos ul{
+  margin: 10px auto;
+  width: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-auto-flow: unset;
+  gap: 20px;
+  list-style-type: none;
+}
+.proyectos img{
+  width: 280px;
+  height: 200px;
+  filter: brightness(0.8);
+  transition: all 500ms;
+  cursor: pointer;
+  margin: 20px 0;
+}
+.proyectos img:hover{
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+.proyectos p{
+  text-transform: uppercase;
+  text-align: center;
+}
+.containerProyectos a{
+  text-decoration: none;
+}
+/* details */
+
+.detalle{
+  font-family: yanone;
+}
+.detalle h1{
+  text-transform: uppercase;
+  text-align: center;
+}
+.detalleGrid{
+  gap: 15px;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+.detalleGrid p{
+  margin: 10px 0;
+}
+.detalle .texto{
+  margin-top: 50px;
+  margin-right: 130px;
+}
+.detalle img{
+  width: 450px; 
+}
+.butonDetail{
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+.botEd{
+  background:rgb(121, 218, 224);
+}
+.botEl{
+  background: rgb(251, 54, 54);
 }

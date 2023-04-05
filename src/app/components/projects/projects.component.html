@@ -1,1 +1,21 @@
-<p>projects works!</p>
+<div class="container">
+    <div class="anchoMaximo containerProyectos">
+        <h2>Proyectos</h2>
+
+        <ul class="grid ">
+
+            <li *ngFor="let project of projects" class="proyectos">
+                <a [routerLink]="['/proyecto/',project._id]">
+                    <img src="{{url+'get-image/'+project.image}}" alt="imagen del proyecto" *ngIf="project.image">
+                    <h2>{{project.name}}</h2>
+                    <p>{{project.langs}}</p>
+                </a>
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+</div>

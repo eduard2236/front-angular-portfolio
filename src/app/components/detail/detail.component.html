@@ -1,0 +1,28 @@
+<div class="detalle anchoMaximo" *ngIf="project">
+    <h1>{{project.name}}</h1>
+    <div class="grid detalleGrid">
+        <div>
+            <p>{{project.description}}</p>
+            <img src="{{url+'get-image/'+project.image}}" alt="imagen del proyecto" *ngIf="project.image">
+            
+        </div>
+        <div class="texto">
+            <div>
+                <h2>tipo de desarrollo</h2>
+                <p>{{project.category}}</p>
+            </div>
+            <h2>lenguajes utilizados</h2>
+            <p>{{project.langs}}</p>
+            <h3>año de creacion</h3>
+            <p>{{project.year}}</p>
+            
+        </div>
+       
+    </div>
+    <div class="cajaBotones grid">
+        <a class="butonDetail botEd" [routerLink]="['/editar-proyecto',project._id]">Editar</a>
+        <a class="butonDetail botEl" (click)="deleteProject(project._id)">Eliminar</a>
+    </div>
+
+    
+</div>

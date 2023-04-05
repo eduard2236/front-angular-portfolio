@@ -1,4 +1,4 @@
-<div class="container" >
+<div class="container" *ngIf="project">
     <div class="anchoMaximod">
         <h2>{{title}}</h2>
         <div class="grid">
@@ -39,10 +39,6 @@
             <div>
                 <label for="image">imagen:</label>
                 <input type="file" name="image" #image="ngModel" [(ngModel)]="project.image" (change)="fileChangeEvent($event)">
-                <span *ngIf="project.image" >
-                    <img src="{{url+'get-image/'+project.image}}" alt="imagen del proyecto" style="width: 100px;">
-                </span>
-                
             </div>
             <input type="submit" value="Guardar Proyecto" [disabled]="!projectForm.form.valid">
         </form>
