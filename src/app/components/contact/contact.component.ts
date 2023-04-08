@@ -6,6 +6,7 @@ declare var $:any;
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit{
+  
   ngOnInit(): void {
     
   }
