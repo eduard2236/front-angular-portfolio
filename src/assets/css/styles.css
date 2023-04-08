@@ -471,6 +471,14 @@ margin-right: 40%;
 .detalle img{
   width: 450px; 
 }
+.cajaBotones{
+  text-align: center;
+}
+.cajaBotones span{
+  display: inline-block;
+  color: red;
+   
+}
 .butonDetail{
   color: white;
   border-radius: 5px;

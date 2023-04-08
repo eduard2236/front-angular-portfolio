@@ -57,8 +57,8 @@ export class EditComponent implements OnInit {
       response =>{
         if(response.proyect){  
           // Subir la imagen
-          if(this.filesToUpload.length>0){
-            this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.projectUpdate._id, [], this.filesToUpload,"image")
+          if(this.filesToUpload){
+            this._uploadService.makeFileRequest(Global.url+"upload-image/"+response.proyect._id, [], this.filesToUpload,"image")
             .then((result:any)=> {
               this.status = "success";
                 this.save_project = response.proyect;
