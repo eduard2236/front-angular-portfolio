@@ -1,136 +1,26 @@
-<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.40818" type="text/javascript"></script>
-<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.40818" type="text/javascript"></script>
-<script type="text/javascript">	JotForm.newDefaultTheme = true;
-	JotForm.extendsNewTheme = false;
-	JotForm.singleProduct = false;
-	JotForm.newPaymentUIForNewCreatedForms = true;
-	JotForm.newPaymentUI = true;
-	JotForm.clearFieldOnHide="disable";
-	JotForm.submitError="jumpToFirstError";
+<div class="container" >
+  <div class="anchoMaximod">
+      <h2>{{title}}</h2>
+      
+      <form [formGroup]="datos">
 
-	JotForm.init(function(){
-	/*INIT-START*/
-if (window.JotForm && JotForm.accessible) $('input_4').setAttribute('tabindex',0);
-if (window.JotForm && JotForm.accessible) $('input_7').setAttribute('tabindex',0);
-      JotForm.setCustomHint( 'input_7', 'Type here...' );
-      JotForm.alterTexts({"ageVerificationError":"Debe ser mayor de {minAge} años para enviar este formulario.","alphabetic":"Este campo solo puede contener letras.","alphanumeric":"Este campo solo puede contener letras y números.","appointmentSelected":"Ha seleccionado {time} del {date}","ccDonationMinLimitError":"La Cantidad Mínima es {minAmount} {currency}","ccInvalidCVC":"El número CVC no es válido.","ccInvalidExpireDate":"La fecha de expiración no es válida","ccInvalidNumber":"El número de su tarjeta de crédito no es válido.","ccMissingDetails":"Please fill up the credit card details.","ccMissingDonation":"Favor ponga valores númericos en la cantidad a donar.","ccMissingProduct":"Por favor seleccione al menos un producto.","characterLimitError":"Demasiados caracteres. El límite es","characterMinLimitError":"Muy pocos caracteres. El mínimum es","confirmClearForm":"¿Está seguro que desea limpiar el formulario?","confirmEmail":"El correo electrónico no coincide","currency":"Este campo sólo puede contener valores de moneda.","cyrillic":"Este campo solo puede contener caracteres cirílicos.","dateInvalid":"Esta fecha no es valida. El formato de fecha es {format}","dateInvalidSeparate":"Esta fecha no es válida. Ponga una {element} válida","dateLimited":"Esta fecha no está disponible.","disallowDecimals":"Por favor, introduzca un número entero.","dragAndDropFilesHere_infoMessage":"Arrastre y suelte archivos aquí","email":"Introduzca una dirección e-mail válida","fillMask":"El valor de este campo debe llenar la mascara","freeEmailError":"No se permiten cuentas de correo gratuitas","generalError":"Existen errores en el formulario, por favor corríjalos antes de continuar.","generalPageError":"Hay errores en esta página. Por favor, corríjalos antes de continuar.","gradingScoreError":"El puntaje total debería ser sólo &amp;quot;menos que&amp;quot; o &amp;quot;igual que&amp;quot;","incompleteFields":"Existen campos requeridos incompletos. Por favor complételos.","inputCarretErrorA":"La entrada no debe ser inferior al valor mínimo:","inputCarretErrorB":"La entrada debe ser menor al valor:","justSoldOut":"Just Sold Out","lessThan":"Su puntuación debería ser menor o igual que","maxDigitsError":"El máximo de dígitos permitido es","maxFileSize_infoMessage":"Tamaño de Archivo Máx.","maxSelectionsError":"The maximum number of selections allowed is ","minSelectionsError":"El número mínimo de opciones obligatorias es","multipleFileUploads_emptyError":"El fichero {file} está vacío; por favor, seleccione de nuevo los ficheros sin él.","multipleFileUploads_fileLimitError":"Solo {fileLimit} carga de archivos permitida.","multipleFileUploads_minSizeError":"{file} is demasiado pequeño, el tamaño mínimo de fichero es: {minSizeLimit}.","multipleFileUploads_onLeave":"Se están cargando los ficheros, si cierras ahora, se cancelará dicha carga.","multipleFileUploads_sizeError":"{file} es demasiado grande; el tamaño del archivo no debe superar los {sizeLimit}.","multipleFileUploads_typeError":"El fichero {file} posee una extensión no permitida. Sólo están permitidas las extensiones {extensions}.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","noSlotsAvailable":"No hay cupos disponibles","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"Este campo sólo admite valores numéricos.","pastDatesDisallowed":"La fecha debe ser futura","pleaseWait":"Por favor, espere ...","required":"Este campo es obligatorio.","requireEveryCell":"Se requieren todas las celdas.","requireEveryRow":"Todas las filas son obligatorias.","requireOne":"Al menos un campo requerido.","restrictedDomain":"This domain is not allowed","selectionSoldOut":"Selection Sold Out","slotUnavailable":"{time} del {date} ha sido tomada. Favor seleccionar otro espacio.","soldOut":"Sold Out","subProductItemsLeft":"({count} items left)","uploadExtensions":"Solo puede subir los siguientes archivos:","uploadFilesize":"Tamaño del archivo no puede ser mayor que:","uploadFilesizemin":"Tamañao de archivo no puede ser menos de:","url":"Este campo solo contiene una URL válida.","validateEmail":"You need to validate this e-mail","wordLimitError":"Demasiadas palabras. El límite es","wordMinLimitError":"Muy pocas palabras. El mínimo es"});
-	/*INIT-END*/
-	});
-
-   JotForm.prepareCalculationsOnTheFly([null,{"name":"heading","qid":"1","text":"Formulario","type":"control_head"},{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},null,{"name":"nombre","qid":"4","text":"Nombre","type":"control_textbox"},null,null,{"name":"contenido","qid":"7","text":"Contenido","type":"control_textarea"},null,{"name":"verificaQue","qid":"9","text":"Verifica que usted es humano","type":"control_captcha"}]);
-   setTimeout(function() {
-JotForm.paymentExtrasOnTheFly([null,{"name":"heading","qid":"1","text":"Formulario","type":"control_head"},{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},null,{"name":"nombre","qid":"4","text":"Nombre","type":"control_textbox"},null,null,{"name":"contenido","qid":"7","text":"Contenido","type":"control_textarea"},null,{"name":"verificaQue","qid":"9","text":"Verifica que usted es humano","type":"control_captcha"}]);}, 20); 
-</script>
-<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
-<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.40818&themeRevisionID=5f7ed99c2c2c7240ba580251"/>
-<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.40818" />
-<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.40818" />
-<form class="jotform-form" action="https://eu-submit.jotform.com/submit/230974822004351" method="post" name="form_230974822004351" id="230974822004351" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="230974822004351" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
-  <div role="main" class="form-all">
-    <ul class="form-section page-section">
-      <li id="cid_1" class="form-input-wide" data-type="control_head">
-        <div class="form-header-group  header-large">
-          <div class="header-text httal htvam">
-            <h1 id="header_1" class="form-header" data-component="header">Formulario</h1>
+          <div>
+              <label for="correo">Correo:</label>
+              <input type="email" name="correo" formControlName="correo" required>
+              
           </div>
+          <div>
+            <label for="asunto">Asunto:</label>
+            <input type="text" name="asunto" formControlName="asunto"  required>
+            
         </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_textbox" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4"> Nombre<span class="form-required">*</span> </label>
-        <div id="cid_4" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_4" name="q4_nombre" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_4" required="" /> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_textarea" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7"> Contenido<span class="form-required">*</span> </label>
-        <div id="cid_7" class="form-input-wide jf-required" data-layout="full"> <textarea id="input_7" class="form-textarea validate[required]" name="q7_contenido" style="width:648px;height:163px" data-component="textarea" required="" aria-labelledby="label_7"></textarea> </div>
-      </li>
-      <li class="form-line jf-required" data-type="control_captcha" id="id_9"><label class="form-label form-label-top form-label-auto" id="label_9" for="input_9"> Verifica que usted es humano<span class="form-required">*</span> </label>
-        <div id="cid_9" class="form-input-wide jf-required" data-layout="full">
-          <section data-wrapper-react="true">
-            <div id="recaptcha_input_9" data-component="recaptcha" data-callback="recaptchaCallbackinput_9" data-expired-callback="recaptchaExpiredCallbackinput_9"></div><input type="hidden" id="input_9" class="hidden validate[required]" name="recaptcha_visible" required="" />
-            <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit&amp;onload=recaptchaLoadedinput_9"></script>
-            <script type="text/javascript">
-              var recaptchaLoadedinput_9 = function()
-              {
-                window.grecaptcha.render($("recaptcha_input_9"),
-                {
-                  sitekey: '6LdU3CgUAAAAAB0nnFM3M3T0sy707slYYU51RroJ',
-                });
-                var grecaptchaBadge = document.querySelector('.grecaptcha-badge');
-                if (grecaptchaBadge)
-                {
-                  grecaptchaBadge.style.boxShadow = 'gray 0px 0px 2px';
-                }
-              };
-
-              /**
-               * Called when the reCaptcha verifies the user is human
-               * For invisible reCaptcha;
-               *   Submit event is stopped after validations and recaptcha is executed.
-               *   If a challenge is not displayed, this will be called right after grecaptcha.execute()
-               *   If a challenge is displayed, this will be called when the challenge is solved successfully
-               *   Submit is triggered to actually submit the form since it is stopped before.
-               */
-              var recaptchaCallbackinput_9 = function()
-              {
-                var isInvisibleReCaptcha = false;
-                var hiddenInput = $("input_9");
-                hiddenInput.setValue(1);
-                if (!isInvisibleReCaptcha)
-                {
-                  if (hiddenInput.validateInput)
-                  {
-                    hiddenInput.validateInput();
-                  }
-                }
-                else
-                {
-                  triggerSubmit(hiddenInput.form)
-                }
-
-                function triggerSubmit(formElement)
-                {
-                  var button = formElement.ownerDocument.createElement('input');
-                  button.style.display = 'none';
-                  button.type = 'submit';
-                  formElement.appendChild(button).click();
-                  formElement.removeChild(button);
-                }
-              }
-
-              // not really required for invisible recaptcha
-              var recaptchaExpiredCallbackinput_9 = function()
-              {
-                var hiddenInput = $("input_9");
-                hiddenInput.writeAttribute("value", false);
-                if (hiddenInput.validateInput)
-                {
-                  hiddenInput.validateInput();
-                }
-              }
-            </script>
-          </section>
-        </div>
-      </li>
-      <li class="form-line" data-type="control_button" id="id_2">
-        <div id="cid_2" class="form-input-wide" data-layout="full">
-          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Enviar</button></div>
-        </div>
-      </li>
-      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
-    </ul>
+          <div>
+              <label for="mensaje">Descripcion:</label>
+              <textarea name="mensaje" formControlName="mensaje" cols="15" rows="5" 
+                 ></textarea>
+          </div>
+          <input type="submit" value="enviar"  (click)="envioCorreo()">
+      </form>
   </div>
-  <script>
-    JotForm.showJotFormPowered = "new_footer";
-  </script>
-  <script>
-    JotForm.poweredByText = "Desarrollado por Jotform";
-  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="230974822004351" />
-  <script type="text/javascript">
-    var all_spc = document.querySelectorAll("form[id='230974822004351'] .si" + "mple" + "_spc");
-    for (var i = 0; i < all_spc.length; i++)
-    {
-      all_spc[i].value = "230974822004351-230974822004351";
-    }
-  </script>
-  <div class="formFooter-heightMask"></div>
-  
-</form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.forwardToEu=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.40818"></script>
-<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.40818"></script>
+
+</div>
