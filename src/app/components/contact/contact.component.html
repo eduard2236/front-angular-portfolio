@@ -2,24 +2,25 @@
   <div class="anchoMaximod">
       <h2>{{title}}</h2>
       
-      <form [formGroup]="datos">
+      <form [formGroup]="datos" #projectForm>
 
-          <div>
+          <!-- <div>
               <label for="correo">Correo:</label>
               <input type="email" name="correo" formControlName="correo" required>
               
-          </div>
+          </div> -->
           <div>
             <label for="asunto">Asunto:</label>
-            <input type="text" name="asunto" formControlName="asunto"  required>
-            
+            <input type="text"  formControlName="asunto">
+            <span *ngIf="!asunto!.valid &&  asunto!.touched">El asunto es obligatorio</span>
         </div>
           <div>
               <label for="mensaje">Descripcion:</label>
               <textarea name="mensaje" formControlName="mensaje" cols="15" rows="5" 
-                 ></textarea>
+                  required></textarea>
+                  <span *ngIf="!mensaje!.valid &&  mensaje!.touched">El Mensaje es obligatorio debe contener al menos 5 caracteres</span>
           </div>
-          <input type="submit" value="enviar"  (click)="envioCorreo()">
+          <input type="submit" value="enviar"  (click)="envioCorreo()" [disabled]="!datos.valid">
       </form>
   </div>
 
