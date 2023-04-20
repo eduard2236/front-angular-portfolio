@@ -1,27 +1,38 @@
-<div class="container" >
-  <div class="anchoMaximod">
-      <h2>{{title}}</h2>
-      
-      <form [formGroup]="datos" #projectForm>
+<div class="container">
+    
+    <div class="anchoMaximod grid">
+        <div>
+            <h2>{{title}}</h2>
 
-          <!-- <div>
-              <label for="correo">Correo:</label>
-              <input type="email" name="correo" formControlName="correo" required>
-              
-          </div> -->
-          <div>
-            <label for="asunto">Asunto:</label>
-            <input type="text"  formControlName="asunto">
-            <span *ngIf="!asunto!.valid &&  asunto!.touched">El asunto es obligatorio</span>
+        <form [formGroup]="datos" #projectForm>
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" formControlName="name">
+                <span *ngIf="!name!.valid &&  name!.touched">Debe ingresar el Nombre Correctamente</span>
+            </div>
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="email" name="correo" formControlName="correo">
+                <span *ngIf="!correo!.valid &&  correo!.touched">Debe ingresar un correo Valido</span>
+            </div>
+            <div>
+                <label for="asunto">Asunto:</label>
+                <input type="text" formControlName="asunto">
+                <span *ngIf="!asunto!.valid &&  asunto!.touched">El asunto es obligatorio</span>
+            </div>
+            <div>
+                <label for="mensaje">Descripcion:</label>
+                <textarea name="mensaje" formControlName="mensaje" cols="15" rows="5" required></textarea>
+                <span *ngIf="!mensaje!.valid &&  mensaje!.touched">El Mensaje es obligatorio debe contener al menos 5
+                    caracteres</span>
+            </div>
+            <input type="submit" value="enviar" (click)="envioCorreo()" [disabled]="!datos.valid">
+        </form>
         </div>
-          <div>
-              <label for="mensaje">Descripcion:</label>
-              <textarea name="mensaje" formControlName="mensaje" cols="15" rows="5" 
-                  required></textarea>
-                  <span *ngIf="!mensaje!.valid &&  mensaje!.touched">El Mensaje es obligatorio debe contener al menos 5 caracteres</span>
-          </div>
-          <input type="submit" value="enviar"  (click)="envioCorreo()" [disabled]="!datos.valid">
-      </form>
-  </div>
+        <div class="imgContact">
+            <img src="../../../assets/img/contact.svg" alt="imagen de contacto">
+        </div>
+        
+    </div>
 
 </div>

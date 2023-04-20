@@ -363,6 +363,7 @@ margin-right: 40%;
 .container form input[type='text'],
 .container form input[type='number'],
 .container form input[type='file'],
+.container form input[type='email'],
 .container textarea{
   width: 100%;
     padding: 5px 10px;
@@ -497,4 +498,10 @@ margin-right: 40%;
   background: rgb(251, 54, 54);
 }
 /* contact*/
-
+.imgContact{
+  display: grid;
+  justify-items: end;
+}
+.imgContact img{
+  width: 80%;
+}

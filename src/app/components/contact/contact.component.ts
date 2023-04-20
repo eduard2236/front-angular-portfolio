@@ -15,7 +15,8 @@ export class ContactComponent implements OnInit {
   crearFormulario(){
     return  new FormGroup({
       //si son mas de dos validaciones se les coloca corchetes
-      //correo:new FormControl('',[Validators.required,Validators.email]),
+      correo:new FormControl('',[Validators.required,Validators.email]),
+      name: new FormControl('',[Validators.required,Validators.pattern(/^([a-zñáéíóú]+[\s]*)+$/)]),
       asunto: new FormControl('', [Validators.required]),
       mensaje: new FormControl('', [Validators.required, Validators.minLength(5)])
     })
@@ -35,17 +36,28 @@ export class ContactComponent implements OnInit {
     if (this.datos.valid) {
       console.log('el formulario es valido')
       Notiflix.Loading.standard('cargando');
+      //se envia mensaje seteado con los datos del formulario y se convierte en plantilla
+      let mensajehtml = `<h1>Nombre: ${this.datos.value.name}</h1>
+                         <h2>Correo: ${this.datos.value.correo}</h2>
+                         <p>Mensaje: ${this.datos.value.mensaje}</p>
+                         <p><strong>No Responda este mensaje</strong><p>`;
+
       let params = {
         //email:this.datos.value.correo,
         asunto: this.datos.value.asunto,
-        mensaje: this.datos.value.mensaje
+        html:mensajehtml
       }
       console.log(params)
       this.datos.reset();
       this.httpclien.post('http://localhost:3700/api/envio', params).subscribe(resp => {
         console.log(resp);
         Notiflix.Loading.remove();
-        Notiflix.Notify.success('enviado correctamente');
+        if(resp){
+          Notiflix.Notify.success('Tu Mensaje se ha enviado correctamente');
+        }else{
+          Notiflix.Notify.failure('Hay un Error tu mensaje no se ha enviado Correctamente');
+        }
+        
       })
     } else {
       console.log('el formulario no es valido')
@@ -55,6 +67,8 @@ export class ContactComponent implements OnInit {
 
   get asunto() { return this.datos.get('asunto');}
   get mensaje() { return this.datos.get('mensaje'); }
+  get correo() { return this.datos.get('correo');}
+  get name() { return this.datos.get('name');}
 
 
 }
