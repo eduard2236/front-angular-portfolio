@@ -505,3 +505,13 @@ margin-right: 40%;
 .imgContact img{
   width: 80%;
 }
+.captcha{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.captcha p{
+  
+  
+  margin-bottom: 5px;
+}

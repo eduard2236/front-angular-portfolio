@@ -26,7 +26,14 @@
                 <span *ngIf="!mensaje!.valid &&  mensaje!.touched">El Mensaje es obligatorio debe contener al menos 5
                     caracteres</span>
             </div>
-            <input type="submit" value="enviar" (click)="envioCorreo()" [disabled]="!datos.valid">
+            <div class="captcha">
+                <p>Comprueba que eres humano</p>
+                <re-captcha (resolved)="resolved($event)" siteKey="6LcdtNokAAAAAIfOF1VAuD5JgKcIMx-7iZSPU__M"></re-captcha>
+            </div>
+            <div >
+                <input type="submit" value="enviar" (click)="envioCorreo()" [disabled]="!datos.valid || !captcha" >
+            </div>
+            
         </form>
         </div>
         <div class="imgContact">

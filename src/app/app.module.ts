@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecaptchaModule} from 'ng-recaptcha';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
@@ -35,7 +36,10 @@ import { IndexComponent } from './components/index/index.component';
     routing,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ReactiveFormsModule,
+    RecaptchaModule
+    
   ],
   providers: [
     appRoutingProviders,

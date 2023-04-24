@@ -11,7 +11,10 @@ declare var $: any;
 })
 export class ContactComponent implements OnInit {
   public title: string;
- 
+  /* public robot: boolean;
+  public presionado: boolean; */
+  public captcha:string;
+
   crearFormulario(){
     return  new FormGroup({
       //si son mas de dos validaciones se les coloca corchetes
@@ -27,6 +30,8 @@ export class ContactComponent implements OnInit {
   constructor(private httpclien: HttpClient) {
     this.title = 'Contacto';
     this.datos = this.crearFormulario();
+   
+    this.captcha = '';
   }
 
   ngOnInit(): void {
@@ -69,6 +74,9 @@ export class ContactComponent implements OnInit {
   get mensaje() { return this.datos.get('mensaje'); }
   get correo() { return this.datos.get('correo');}
   get name() { return this.datos.get('name');}
-
+  
+  resolved(captchaResponse:string){
+    this.captcha = captchaResponse;
+  }
 
 }
