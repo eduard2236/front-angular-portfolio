@@ -12,12 +12,69 @@
     font-family: finger;
     src: url(fonts/finger.ttf);
 }
+/* icons styles */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('icons/fonts/icomoon.eot?uuxb6t');
+  src:  url('icons/fonts/icomoon.eot?uuxb6t#iefix') format('embedded-opentype'),
+    url('icons/fonts/icomoon.ttf?uuxb6t') format('truetype'),
+    url('icons/fonts/icomoon.woff?uuxb6t') format('woff'),
+    url('icons/fonts/icomoon.svg?uuxb6t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user-plus:before {
+  content: "\e973";
+}
+.icon-key:before {
+  content: "\e98d";
+}
+.icon-key2:before {
+  content: "\e98e";
+}
+.icon-lock:before {
+  content: "\e98f";
+}
+.icon-unlocked:before {
+  content: "\e990";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+
 
 /* generals styles */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+.iconos{
+  margin-left: 20px;
+  position: fixed;
+  z-index: 10;
+  right: 1%;
+}
+.iconos a{
+  color: rgb(53, 58, 179) !important;
+  cursor: pointer;
 }
 .anchoMaximo{
     max-width: 1330px;
@@ -312,34 +369,83 @@ img, svg {
 /* about me */
 
 .about{
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    padding: 20px ;
     font-family: sans-serif;
 }
+.about p{
+  text-align: justify;
+  font-size: 1.6em;
+}
+.title{
+  color: #80669f;
+}
 .about h1{
-    
-margin-right: 40%;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 2.6em;
+  margin: 30px 0;
 }
 .about h2{
-
-    margin-left: 40%;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 2.4em;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 .aboutMe{
+   gap: 25px;
     margin: 20px 40px;
 }
-.aboutMe h2{
+.aboutMe h2,.aboutMe h3{
     font-weight: bold;
     font-size: 2.4em;
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
-.aboutMe p{
-    font-size: 1.6em;
+.aboutMe img{
+  width:350px;
 }
 .aboutMe span{
     color: #80669f;
+}
+.second{
+  gap: 35px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.texto{
+  text-align: justify;
+  margin-right: 20px;
+}
+.texto p{
+  margin: 20px 0;
+}
+.second img{
+  width:400px;
+}
+
+.conocimientos{
+  margin: 30px 10px;
+}
+.conocimientos h3{
+  margin: 20px 10px;
+  font-size: 1.6em;
+}
+.conocimientos li{
+  list-style-type: none;
+  font-size: 1.4em;
+  margin: 10px ;
+  padding-left: 20px;
+}
+.conocimientos img{
+    width: 500px;
+}
+.front{
+  margin-bottom: 30px;
+}
+.back{
+  margin-top: 60px;
 }
 /* form create projects */
 .container h2{

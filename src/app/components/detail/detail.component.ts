@@ -13,7 +13,8 @@ import { Route,ActivatedRoute, Params, Router } from '@angular/router';
 export class DetailComponent implements OnInit {
     public url: string;  
     public project: Project;
-    public confirm:boolean
+    public confirm:boolean;
+    public token:any;
   constructor(private _projectService: ProjectService,
               private _router: Router,
               private _route: ActivatedRoute,
@@ -21,6 +22,7 @@ export class DetailComponent implements OnInit {
         this.url = Global.url;
         this.project = new Project('','','','',0,'','');
         this.confirm = false;
+        this.token = localStorage.getItem("ACCESS_TOKEN")
     }
 
     ngOnInit(): void {
