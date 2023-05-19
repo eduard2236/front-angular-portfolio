@@ -15,8 +15,14 @@
             class="icon-user-plus"></span></a></li>
       <!-- <li *ngIf="token == null"><a [routerLink]="['/registro']"  [routerLinkActive]="['actived']"></a></li> -->
       <li *ngIf="token != null" title="Salir"><a (click)="logout()"><span class="icon-unlocked"></span></a></li>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
     </ul>
   </div>
+  <div class="cm-up" id="cm-up">
+		<span class="cm-icon">
+			<img src="../assets/img/chevron-up-solid.svg" alt="">
+		</span>
+	</div>
 </header>
 <main>
   <section id="content" class="">
@@ -28,14 +34,14 @@
 <footer class="footerPrincipal">
   <div class="grid box-footer">
     <div class="tel">
-      Contacto:
+      <h2>CONTACTO:</h2>
       <ul>
-        <li><span class="icon-whatsapp"></span> Telefono: 611296277</li>
-        <li><span class="icon-mail"></span> Correo: eduardcolmenares2236@gmail.com</li>
+        <li><span class="icon-whatsapp"></span><a href="tel:611296277"> 611 296 22 77 </a></li>
+        <li><span class="icon-mail"></span><a href="mailto:eduardcolmenares2236@gmail.com"> eduardcolmenares2236@gmail.com</a></li>
       </ul>
     </div>
     <div class="social ">
-      Redes:
+      <h2>REDES:</h2>
       <ul class="grid">
         <li><a href="https://www.instagram.com/eduard_2236/" target="_blank"><span class="icon-instagram"></span></a></li>
         <li><a href="https://github.com/eduard2236" target="_blank"><span class="icon-github"></span></a></li>
@@ -45,7 +51,7 @@
     </div>
   </div>
   <div class="anchoMaximo grid ">
-    Copyright © 2023 Eduard Colmenares • Desarrollador Web
+   <p>Copyright © 2023 Eduard Colmenares • Desarrollador Web</p> 
   </div>
 
 </footer>

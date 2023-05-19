@@ -9,6 +9,9 @@ import Typed from 'typed.js';
 export class IndexComponent implements OnInit{
 
   ngOnInit(): void {
+    
+    
+
     const typed = new Typed('.typed', {
       strings: ['<i class="index-name">Soy Eduard Colmenares</i>', '<i class="index-name">Desarrollador Web<i>'],
       /* stringsElement: '.typed', //id del elemento que contiene cadenas de texto a mostrar */

@@ -1,20 +1,65 @@
 <div>
     <section class="present">
         <div class="index">
-            <h2>- Bienvenido a mi Portafolio Web-</h2>
-               <h1 > <img src="../../../assets/img/angulo-izquierdo.svg" alt="">/<span  class="typed"></span><img
-                src="../../../assets/img/angulo-derecho.svg" alt=""></h1>
-            
-           
-            
-                <div class="present-buttons grid" >
-                    <button>[ Sobre mi ]</button>
-                    <button>[ Proyectos ] </button>
-                </div>
+            <h2><span>- Hola Bienvenido a mi Portafolio Web-</span></h2>
+            <h1> <img src="../../../assets/img/angulo-izquierdo.svg" alt="">/<span class="typed"></span><img
+                    src="../../../assets/img/angulo-derecho.svg" alt=""></h1>
+
+
+
+            <div class="present-buttons grid">
+                <button [routerLink]="['/sobre-mi']">[ Sobre mi ]</button>
+                <button [routerLink]="['/proyectos']">[ Proyectos ] </button>
+            </div>
+
+
+        </div>
+
+    </section>
+    <section class="technologies">
+        <div class="grid box-technologies anchoMaximo">
+            <div class="grid">
+                
                 <div>
-                    
+                    <div>
+                        <span class="icon-hammer"></span>
+                        
+                        <span class="icon-cog"></span>
+                    </div>
+                    <h2>Desarrollo Web</h2>
+                    <p>Desde cero o con tus ideas, programo tu sitio web utilizando tecnologías HTML5, CSS3, PHP,
+                        JavaScript, jQuery, BootStrap, MySQL, WordPress y sus temas, plugins, WooCommerce, Angular</p>
                 </div>
-          
+
+            </div>
+            <div class="grid">
+                
+                <div>
+                    <div>
+                        <span class="icon-wrench"></span>
+                        <span class="icon-database"></span>
+                    </div>
+                    <h2>base de datos</h2>
+                    <p>Administro corrijo errores que puedan existir en tu base de datos, agregando nuevas queries o
+                        simplificando las ya existentes</p>
+                </div>
+
+            </div>
+            <div class="grid">
+                
+                <div>
+                    <div>
+                        <span class="icon-mobile"></span>
+                        <span class="icon-tablet"></span>
+                        <span class="icon-display"></span>
+                    </div>
+                    <h2>Maquetacion web</h2>
+                    <p>Diseño o rediseño el front de tu web a tu gusto dependiendo de las exigencias se canalizara el
+                        tiempo de maquetacion, tambien hago que tu sitio web sea resposive adaptable a cualquier
+                        dispositivo </p>
+                </div>
+
+            </div>
         </div>
 
     </section>
