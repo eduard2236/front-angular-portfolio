@@ -24,8 +24,10 @@ export class AppComponent implements OnInit{
       $(window).scroll(function(){
         if($(window).scrollTop() > 0) {
           $('#cm-up').slideDown(300);
+          $('.headerPrincipal ul').css('min-height','50px');
         } else {
           $('#cm-up').slideUp(300);
+          $('.headerPrincipal ul').css('min-height','80px');
         }
       });
       $('#cm-up').on('click', function(){
@@ -35,7 +37,20 @@ export class AppComponent implements OnInit{
         return false;
       });
 
+      $(window).resize(function() {
+        if($(window).width() > 683) {
+          $('.headerPrincipal ul').css('display','grid')
+        }else{
+          $('.headerPrincipal ul').css('display','none')
+        }
+      });
+    
+      //funcion del icono hamburguesa
+      $('.icon-menu').on('click',function(){
+        $('.nav-ul').slideToggle('slow');
+      })
     }
+    
 
   logout(){
     this.authService.logout();
