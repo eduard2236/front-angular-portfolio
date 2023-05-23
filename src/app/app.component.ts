@@ -20,16 +20,36 @@ export class AppComponent implements OnInit{
   }
   
   ngOnInit(): void {
-    
+
       $(window).scroll(function(){
+       
         if($(window).scrollTop() > 0) {
           $('#cm-up').slideDown(300);
           $('.headerPrincipal ul').css('min-height','50px');
+          $('.headerPrincipal').css('background','linear-gradient(to bottom, #80669fd0, #9d98b2d8)');
         } else {
           $('#cm-up').slideUp(300);
           $('.headerPrincipal ul').css('min-height','80px');
+          $('.headerPrincipal').css('background','linear-gradient(to bottom, #80669f, #9d98b2)');
         }
       });
+      
+      $('.nav-ul a').on('click',function(){
+          if($(window).width()< 700){
+            $('.nav-ul').slideUp('slow')
+          }
+      });
+      
+      $(window).scroll(function(){
+        if($(window).scrollTop() > $('#block').scrollTop()+400/3) {
+          $('#block').slideDown(1000);
+         
+        } else {
+          $('#block').hide(300);
+         
+        }
+      });
+
       $('#cm-up').on('click', function(){
         $('body, html').animate({
           scrollTop: 0

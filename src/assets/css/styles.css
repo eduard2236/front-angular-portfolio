@@ -301,6 +301,7 @@ body {
 
 /* header */
 .headerPrincipal {
+  
   font-family: 'Hind Siliguri', sans-serif;
   width: 100%;
   background: linear-gradient(to bottom, #80669f, #9d98b2);
@@ -452,7 +453,7 @@ body {
 
 /* section technologies */
 .technologies {
-  min-height: 270px;
+  min-height: 300px;
   text-align: center;
 }
 
@@ -496,13 +497,57 @@ body {
   font-size: 1.1em;
   font-family: monospace;
 }
-
-
-
 .contentComponent {
   margin: 20px 40px;
 }
+/* section contact-me */
+.font{
+  
+}
+.font{
+  background: #000;
+  min-height: 50px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  
+}
+.font>div{
+  margin-top: -50px;
+  min-height: 50px;
+  background: #80669f;
+  border-radius: 15px;
+  width: 95%;
+  padding: 0px 80px;
+  gap: 30px;
+  font-family: monospace;
+  color: white;
+}
+.font>div h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+}
+.font>div p{
+  text-align: center;
+}
+.font>div button{
+  transition: all 0.5s;
+  color: white;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid rgb(247, 244, 243);
+  border-radius: 10px;
+}
 
+.font>div button:hover{
+  color: #49FF18;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid #49FF18;
+  border-radius: 10px;
+  cursor: pointer;
+  scale: 1.1;
+}
 /* footer */
 
 .footerPrincipal {
@@ -717,14 +762,14 @@ body {
 
 .container h2 {
   text-align: center;
-  font-family: yanone;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.9em;
 }
 
 .container form {
   width: 400px;
   margin: 20px auto;
-  font-family: yanone;
+  font-family: monospace;
 }
 
 .container form label {
@@ -922,12 +967,70 @@ body {
  /* index page */
  .box-technologies{
   grid-template-columns: 1fr;
-
+  padding-bottom: 100px;
  }
  .box-technologies p{
   margin-bottom: 30px;
   padding: 0px 30px;
  }
+/* about */
+.about h1{
+  font-size: 2.4em;
+}
+.aboutMe img{
+  width: 300px;
+}
+.aboutMe p,.texto p{
+  font-size:  1.4em;
+}
+.second img{
+  width: 350px;
+}
+.conocimientos img{
+  width: 420px;
+}
+@media  screen and (max-width:800px) {
+  .about h1{
+    padding-top: 120px;
+  }
+  .aboutMe{
+    grid-auto-flow: unset;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .aboutMe .div1{
+    order: 1;
+    text-align: center;
+  }
+  .aboutMe h3,.about h2{
+    font-size: 2.0em;
+  }
+  .div2{
+    order: 0;
+  }
+  .second{
+    grid-auto-flow: unset;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    justify-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .texto p{
+    text-align: justify;
+  }
+  .conocimientos h3{
+    font-size: 1.1em;
+  }
+  .conocimientos img {
+    width: 360px;
+}
+.donwload{
+  padding: 9px 10px;
+  font-size: 0.9em;
+}
+
+}
 
 /* contact page */
     .container .grid{
@@ -985,6 +1088,40 @@ body {
   .box-technologies p{
     text-align: center;
   }
+  .font>div{
+    margin-top: -73px;
+    padding: 20px 0;
+    min-height: 100px;
+    text-align: center;
+    grid-auto-flow: unset;
+    grid-template-columns: 1fr;
+    gap: 11px;
+    justify-items: center;
+  }
+  .font>div button{
+    width: 150px;
+  }
+  .font>div p{
+    padding: 0 15px;
+  }
+  .font{
+    min-height: 79px;
+  }
+  /* about */
+  .front,.back{
+    grid-auto-flow: unset;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .front1{
+    order: 0;
+  }
+  .front2{
+    order: 1;
+  }
+  
+
+  
   /* footer */
   .box-footer{
     grid-template-columns: 1fr;
@@ -1001,4 +1138,10 @@ body {
   .footerPrincipal>div{
     min-height: 70px;
   }
+}
+@media screen and (max-width: 400px) {
+  .container form {
+    width: 90%;
+    margin: 20px 20px;
+}
 }
