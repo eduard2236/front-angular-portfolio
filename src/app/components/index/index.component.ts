@@ -15,7 +15,7 @@ export class IndexComponent implements OnInit{
       strings: ['<i class="index-name">Soy Eduard Colmenares</i>', '<i class="index-name">Desarrollador Web<i>'],
       /* stringsElement: '.typed', //id del elemento que contiene cadenas de texto a mostrar */
       typeSpeed: 75, //velocidad en milisegundos para cada letra
-      startDelay: 300, //tiempo de retraso en iniciar la animacion aplica tambien al inicio del ciclo
+      startDelay: 600, //tiempo de retraso en iniciar la animacion aplica tambien al inicio del ciclo
       backSpeed: 75, // velocidad en milisegundos para borrar una letra
       smartBackspace: true, //elimina solo palabras que sean nuevas
       shuffle: false, //altera el orden en que se escriben las palabras

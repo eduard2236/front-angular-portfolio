@@ -7,8 +7,10 @@ body {
 
 .login {
   width: 400px;
-  margin: 16px auto;
+  margin: 0px auto;
   font-size: 16px;
+  display: grid;
+  justify-items: center;
 }
 
 /* Reset top and bottom margins from certain elements */
@@ -24,21 +26,22 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color: rgb(96, 113, 126);
 }
 
 .login-header {
-  background: #28d;
-  padding: 20px;
+  
+  padding-top: 10px;
   font-size: 1.4em;
   font-weight: normal;
   text-align: center;
-  text-transform: uppercase;
-  color: #fff;
+  color: #0a0a0a;
+  border-radius: 8px;
 }
 
 .login-container {
-  background: #ebebeb;
+  margin: 0 0px;
+  background: #ebebeb06;
   padding: 12px;
 }
 
@@ -73,14 +76,14 @@ body {
 }
 
 .login input[type="submit"] {
-  background: #28d;
+  background: rgb(12, 12, 12);
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
 .login input[type="submit"]:hover {
-  background: #17c;
+  background: rgb(204, 70, 17);
 }
 
 /* Buttons' focus effect */

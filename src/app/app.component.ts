@@ -41,13 +41,24 @@ export class AppComponent implements OnInit{
       });
       
       $(window).scroll(function(){
-        if($(window).scrollTop() > $('#block').scrollTop()+400/3) {
-          $('#block').slideDown(1000);
-         
-        } else {
-          $('#block').hide(300);
-         
+        if($(window).width()< 700){
+          if($(window).scrollTop() > $('#block').scrollTop()+2500/3) {
+            $('#block').slideDown(1000);
+           
+          } else {
+            $('#block').hide(300);
+           
+          }
+        }else{
+          if($(window).scrollTop() > $('#block').scrollTop()+850/3) {
+            $('#block').slideDown(1000);
+           
+          } else {
+            $('#block').hide(300);
+           
+          }
         }
+        
       });
 
       $('#cm-up').on('click', function(){
@@ -59,9 +70,9 @@ export class AppComponent implements OnInit{
 
       $(window).resize(function() {
         if($(window).width() > 683) {
-          $('.headerPrincipal ul').css('display','grid')
+          $('.navPrincipal>ul').css('display','grid')
         }else{
-          $('.headerPrincipal ul').css('display','none')
+          $('.navPrincipal>ul').css('display','none')
         }
       });
     

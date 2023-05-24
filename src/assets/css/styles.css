@@ -687,6 +687,7 @@ body {
 .texto {
   text-align: justify;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 .texto p {
@@ -982,6 +983,7 @@ body {
 }
 .aboutMe p,.texto p{
   font-size:  1.4em;
+  text-align: center;
 }
 .second img{
   width: 350px;
@@ -1016,9 +1018,7 @@ body {
     margin-left: 40px;
     margin-right: 40px;
   }
-  .texto p{
-    text-align: justify;
-  }
+  
   .conocimientos h3{
     font-size: 1.1em;
   }
@@ -1050,13 +1050,14 @@ body {
 @media screen and (max-width: 700px ){
 
   .present h1{
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   .present h2 span{
     font-size: 1.1em;
   }
   .present-buttons{
     font-size: 1.1em;
+    margin-top: 128px;
   }
   .present h1 img{
     width: 16px;
@@ -1107,6 +1108,10 @@ body {
   .font{
     min-height: 79px;
   }
+  /* forms */
+  .container form{
+    width: 400px ;
+  }
   /* about */
   .front,.back{
     grid-auto-flow: unset;
@@ -1139,9 +1144,13 @@ body {
     min-height: 70px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .container form {
-    width: 90%;
-    margin: 20px 20px;
+    width: 85%;
+    margin: 20px auto;
 }
+.box-footer-second{
+  margin: 0 58px;
+}
+
 }
