@@ -22,7 +22,7 @@ export class AuthenticateGuard implements CanActivate {
       if( token2 != null){
         return true;
       }else{
-        this.router.navigate(['/','auth']);    
+        this.router.navigate(['/','crear-proyectos']);    
         return false;
 
       }

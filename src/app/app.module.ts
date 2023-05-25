@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecaptchaModule} from 'ng-recaptcha';
 
@@ -16,6 +16,8 @@ import { EditComponent } from './components/edit/edit.component';
 import { IndexComponent } from './components/index/index.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+/* interceptor */
+import { AuthInterceptorService } from './auth-interceptor.service';
 
 import * as $ from 'jquery' ;
 
@@ -49,6 +51,11 @@ import * as $ from 'jquery' ;
   ],
   providers: [
     appRoutingProviders,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
