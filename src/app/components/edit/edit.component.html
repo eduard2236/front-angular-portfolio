@@ -1,0 +1,56 @@
+<div class="container" >
+    <div class="anchoMaximod">
+        <h2>{{title}}</h2>
+        <div class="grid">
+            <div class="messaje success" *ngIf="status == 'success' && save_project">
+                El proyecto se ha creado correctamente, puedes <a [routerLink]="['/proyecto',save_project._id]">verlo aqui</a>
+            </div>
+            <div class="messaje failed" *ngIf="status=='failed'">
+                El proyecto no se ha creado correctamente
+            </div>
+        </div>
+        
+        <form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+            <div>
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" #name="ngModel" [(ngModel)]="project.name" required>
+                <span *ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
+            </div>
+            <div>
+                <label for="description">Descripcion:</label>
+                <textarea name="description" id="description" cols="15" rows="5" #description="ngModel"
+                    [(ngModel)]="project.description" required></textarea>
+                <span *ngIf="description.touched && !description.valid">La descripcion es obligatoria</span>
+            </div>
+            <div>
+                <label for="category">Categoria:</label>
+                <input type="text" name="category" #category="ngModel" [(ngModel)]="project.category" required>
+                <span *ngIf="category.touched && !category.valid">La categoria es obligatoria</span>
+            </div>
+            <div>
+                <label for="year">Año:</label>
+                <input type="number" name="year" #year="ngModel" [(ngModel)]="project.year">
+            </div>
+            <div>
+                <label for="langs">Lenguajes:</label>
+                <input type="text" name="langs" #langs="ngModel" [(ngModel)]="project.langs" required>
+                <span *ngIf="langs.touched && !langs.valid">Los lenguajes son obligatorios</span>
+            </div>
+            <div>
+                <label for="image">imagen:</label>
+                <input type="file" name="image"  (change)="fileChangeEvent($event)">
+                <span  *ngIf="project.image">
+                    <img src="{{url+'get-image/'+project.image}}" alt="imagen del proyecto" style="width: 100px;">
+            
+                </span>
+                
+            </div>
+            <div class="butons-edit">
+                <a  class="butonDetail botEd" [routerLink]="['/proyecto',project._id]">Atras</a>
+                <input type="submit" value="Guardar Proyecto" [disabled]="!projectForm.form.valid">
+            </div>
+            
+        </form>
+    </div>
+
+</div>

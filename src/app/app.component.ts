@@ -42,7 +42,7 @@ export class AppComponent implements OnInit{
       
       $(window).scroll(function(){
         if($(window).width()< 700){
-          if($(window).scrollTop() > $('#block').scrollTop()+2500/3) {
+          if($(window).scrollTop() > $('#block').scrollTop()+1800/3) {
             $('#block').slideDown(1000);
            
           } else {

@@ -7,7 +7,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
-  templateUrl: '../create/create.component.html',
+  templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.css'],
   providers: [ProjectService,UploadService]
 })

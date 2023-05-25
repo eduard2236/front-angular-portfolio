@@ -1,7 +1,7 @@
 <div class="detalle anchoMaximo" *ngIf="project">
     <h1>{{project.name}}</h1>
     <div class="grid detalleGrid">
-        <div>
+        <div class="caja-imagen">
             <p>{{project.description}}</p>
             <img src="{{url+'get-image/'+project.image}}" alt="imagen del proyecto" *ngIf="project.image">
             
@@ -20,12 +20,14 @@
        
     </div>
     <div class="cajaBotones grid" *ngIf="confirm == false">
-        <a class="butonDetail botEd" [routerLink]="['/editar-proyecto',project._id]">Editar</a>
+        <a class="butonDetail botEd" [routerLink]="['/proyectos']">Atras</a>
+        <a *ngIf="token != null" class="butonDetail botEd" [routerLink]="['/editar-proyecto',project._id]">Editar</a>
         <a *ngIf="token != null" class="butonDetail botEl" (click)="setConfirm(true)">Eliminar</a>
     </div>
     <div class="cajaBotones " *ngIf="confirm == true">
         <span>¿Seguro que desea eliminar el proyecto definitivamente?</span>
         <div class="grid">
+            <a class="butonDetail botEd" [routerLink]="['/proyectos']">Atras</a>
             <a class="butonDetail botEd" (click)="setConfirm(false)">Cancelar</a>
             <a class="butonDetail botEl" (click)="deleteProject(project._id)">Eliminar definitivamente</a>
         </div>    
