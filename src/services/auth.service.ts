@@ -6,14 +6,15 @@ import { pipe, tap } from 'rxjs';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Global } from './global';
 import { Router } from '@angular/router';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
-
+const helper = new JwtHelperService();
 @Injectable()
 export class AuthService {
   AUTH_SERVER: string = Global.url;
   authSubject = new BehaviorSubject(false);
   private token: any;
-  constructor(private httClient: HttpClient , private router: Router) {
+  constructor(private httClient: HttpClient , private router: Router, ) {
     this.token = "";
    }
 
@@ -40,6 +41,12 @@ export class AuthService {
       }
     })
     );
+  }
+
+  public isAuthenticated():boolean{
+    const token3 = localStorage.getItem('ACCESS_TOKEN');
+    return !helper.isTokenExpired(token3);
+
   }
 
   logout():void{

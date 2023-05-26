@@ -10,14 +10,14 @@ export class AuthInterceptorService implements HttpInterceptor {
 
   constructor(private router: Router) { }
 
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+  intercept(req: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
     const token: any = localStorage.getItem('ACCESS_TOKEN');
 
     let request = req;
 
     if (token) {
-      request = req.clone({
+      request = req.clone(  {
         setHeaders: {
           authorization: `Bearer ${ token }`
         }

@@ -3,26 +3,27 @@ import { Global } from 'src/services/global';
 import { Project } from 'src/models/projects';
 import { ProjectService } from 'src/services/project.service';
 import { Route,ActivatedRoute, Params, Router } from '@angular/router';
-
+import { AuthService } from 'src/services/auth.service';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css'],
-  providers: [ProjectService]
+  providers: [ProjectService , AuthService]
 })
 export class DetailComponent implements OnInit {
     public url: string;  
     public project: Project;
     public confirm:boolean;
-    public token:any;
+    public token:boolean;
   constructor(private _projectService: ProjectService,
               private _router: Router,
               private _route: ActivatedRoute,
+              private authService: AuthService
               ){
         this.url = Global.url;
         this.project = new Project('','','','',0,'','');
         this.confirm = false;
-        this.token = localStorage.getItem("ACCESS_TOKEN")
+        this.token = !this.authService.isAuthenticated();
     }
 
     ngOnInit(): void {

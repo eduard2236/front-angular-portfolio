@@ -11,12 +11,12 @@ declare var $:any;
 })
 export class AppComponent implements OnInit{
   title = 'portfolio-angular';
-  token: any;
+  token: boolean;
 
   
 
   constructor(private authService: AuthService){ 
-    this.token = localStorage.getItem("ACCESS_TOKEN")
+    this.token = !this.authService.isAuthenticated()
   }
   
   ngOnInit(): void {

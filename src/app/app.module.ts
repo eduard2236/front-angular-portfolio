@@ -18,6 +18,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 /* interceptor */
 import { AuthInterceptorService } from './auth-interceptor.service';
+import { AuthService } from 'src/services/auth.service';
 
 import * as $ from 'jquery' ;
 
@@ -45,12 +46,12 @@ import * as $ from 'jquery' ;
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ReactiveFormsModule,
-    RecaptchaModule
+    RecaptchaModule,
     
   ],
   providers: [
     appRoutingProviders,
+    AuthService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,

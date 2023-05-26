@@ -5,7 +5,7 @@
       <li><a [routerLink]="['/inicio']" [routerLinkActive]="['actived']">Inicio</a></li>
       <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a></li>
       <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
-      <li *ngIf="token != null"><a [routerLink]="['/crear-proyectos']" [routerLinkActive]="['actived']">Crear
+      <li *ngIf="token != true"><a [routerLink]="['/crear-proyectos']" [routerLinkActive]="['actived']">Crear
           proyecto</a></li>
       <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
     </ul>
@@ -15,7 +15,7 @@
       <li><a [routerLink]="['/auth']" [routerLinkActive]="['actived']" title="iniciar sesion"><span
             class="icon-user-plus"></span></a></li>
       <!-- <li *ngIf="token == null"><a [routerLink]="['/registro']"  [routerLinkActive]="['actived']"></a></li> -->
-      <li *ngIf="token != null" title="Salir"><a (click)="logout()"><span class="icon-unlocked"></span></a></li>
+      <li *ngIf="token != true" title="Salir"><a (click)="logout()"><span class="icon-unlocked"></span></a></li>
       <i class="fa fa-angle-up" aria-hidden="true"></i>
     </ul>
   </div>

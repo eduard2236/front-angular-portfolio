@@ -21,8 +21,8 @@
     </div>
     <div class="cajaBotones grid" *ngIf="confirm == false">
         <a class="butonDetail botEd" [routerLink]="['/proyectos']">Atras</a>
-        <a *ngIf="token != null" class="butonDetail botEd" [routerLink]="['/editar-proyecto',project._id]">Editar</a>
-        <a *ngIf="token != null" class="butonDetail botEl" (click)="setConfirm(true)">Eliminar</a>
+        <a *ngIf="token != true" class="butonDetail botEd" [routerLink]="['/editar-proyecto',project._id]">Editar</a>
+        <a *ngIf="token != true" class="butonDetail botEl" (click)="setConfirm(true)">Eliminar</a>
     </div>
     <div class="cajaBotones " *ngIf="confirm == true">
         <span>¿Seguro que desea eliminar el proyecto definitivamente?</span>
