@@ -384,7 +384,7 @@ body {
   min-height: 500px;
   width: 100%;
   filter: none;
-  background: url(../img/escritorio2.jpg) center center/cover;
+  background: url(../img/escritorio3.jpg) center center/cover;
   text-align: center;
   z-index: -1;
 }
@@ -504,7 +504,6 @@ body {
 }
 
 /* section contact-me */
-.font {}
 
 .font {
   background: #000;
@@ -1272,7 +1271,9 @@ body {
     width: 85%;
     margin: 20px auto;
   }
-
+  .login {
+    width: 100% !important;
+  }
   .box-footer-second {
     margin: 0 58px;
   }

@@ -1,3 +1,3 @@
 export var Global = {
-    url: 'http://localhost:3700/api/'
+    url: 'https://eduard-api-rest-nodejs-portfolio.onrender.com/api/'
 };

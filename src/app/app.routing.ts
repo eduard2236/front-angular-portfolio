@@ -14,10 +14,10 @@ import { RegisterComponent } from "./components/auth/register/register.component
 import { AuthenticateGuard } from "./authenticate.guard";
 
 const appRoutes: Routes = [
-    /* {path: '/auth' , pathMatch: 'full'}, */
+    
     {path: 'registro', component: RegisterComponent},
     {path: 'auth', component: LoginComponent},
-    {path: '', component: AboutComponent},
+    {path: '', component: IndexComponent},
     {path: 'inicio',component: IndexComponent},
     {path: 'sobre-mi', component: AboutComponent},
     {path: 'proyectos', component: ProjectsComponent},

@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
       }
       console.log(params)
       this.datos.reset();
-      this.httpclien.post('http://localhost:3700/api/envio', params).subscribe(resp => {
+      this.httpclien.post('https://eduard-api-rest-nodejs-portfolio.onrender.com/api/envio', params).subscribe(resp => {
         console.log(resp);
         Notiflix.Loading.remove();
         if(resp){
