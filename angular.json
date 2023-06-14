@@ -90,7 +90,7 @@
               "src/assets",
               {
                 "glob": "_redirects",
-                "input": "static",
+                "input": "src",
                 "output": "/"
               }
             ],
