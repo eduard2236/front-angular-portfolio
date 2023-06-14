@@ -87,7 +87,12 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "_redirects",
+                "input": "static",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
