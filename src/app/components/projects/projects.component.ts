@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { Project } from 'src/models/projects';
 import { ProjectService } from 'src/services/project.service';
 import { Global } from 'src/services/global';
+import * as Notiflix from 'notiflix';
 
 @Component({
   selector: 'app-projects',
@@ -22,9 +23,11 @@ export class ProjectsComponent implements OnInit{
   }
 
   getProjects(){
+    Notiflix.Loading.standard('cargando');
     this._projectService.getProyects().subscribe(
       response =>{
         if(response.proyects){
+          Notiflix.Loading.remove();
           this.projects = response.proyects
         }else{
 
