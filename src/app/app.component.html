@@ -1,7 +1,9 @@
 <header class="headerPrincipal" >
   <div class="anchoMaximo navPrincipal">
     <div class="grid"><span class="icon-menu"></span></div>
-    <ul class="grid nav-ul">
+    <div class="grid-h">
+      <div><img src="../assets/img/ed2-removebg-preview__4_-removebg-preview.png" alt="" class="ed-img"></div>
+    <ul class="grid nav-ul" >
       <li><a [routerLink]="['/inicio']" [routerLinkActive]="['actived']">Inicio</a></li>
       <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a></li>
       <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
@@ -9,6 +11,17 @@
           proyecto</a></li>
       <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
     </ul>
+    <ul class="grid nav-ul" id="menu-movil">
+      <li><a [routerLink]="['/inicio']" [routerLinkActive]="['actived']">Inicio</a></li>
+      <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre mi</a></li>
+      <li><a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']">Proyectos</a></li>
+      <li *ngIf="token != true"><a [routerLink]="['/crear-proyectos']" [routerLinkActive]="['actived']">Crear
+          proyecto</a></li>
+      <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
+    </ul>
+    </div>
+    
+    
   </div>
   <div class="iconos">
     <ul>

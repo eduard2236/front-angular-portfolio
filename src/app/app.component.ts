@@ -26,10 +26,12 @@ export class AppComponent implements OnInit{
         if($(window).scrollTop() > 0) {
           $('#cm-up').slideDown(300);
           $('.headerPrincipal ul').css('min-height','50px');
+          $('.headerPrincipal .ed-img').css('width','60px');
           $('.headerPrincipal').css('background','linear-gradient(to bottom, #80669fd0, #9d98b2d8)');
         } else {
           $('#cm-up').slideUp(300);
           $('.headerPrincipal ul').css('min-height','80px');
+          $('.headerPrincipal .ed-img').css('width','110px');
           $('.headerPrincipal').css('background','linear-gradient(to bottom, #80669f, #9d98b2)');
         }
       });
@@ -70,15 +72,17 @@ export class AppComponent implements OnInit{
 
       $(window).resize(function() {
         if($(window).width() > 683) {
-          $('.navPrincipal>ul').css('display','grid')
+          $('.navPrincipal>ul').css('display','grid ')    
+          $('.navPrincipal .ed-img').css('display','grid')
         }else{
           $('.navPrincipal>ul').css('display','none')
+          $('.navPrincipal .ed-img').css('display','none')
         }
       });
     
       //funcion del icono hamburguesa
       $('.icon-menu').on('click',function(){
-        $('.nav-ul').slideToggle('slow');
+        $('#menu-movil').slideToggle('slow');
       })
     }
     
