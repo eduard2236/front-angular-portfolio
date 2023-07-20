@@ -868,6 +868,7 @@ body {
 /* proyectos */
 .containerProyectos ul {
   margin: 10px auto;
+  margin-bottom: 40px;
   width: 80%;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
@@ -897,6 +898,14 @@ body {
 
 .containerProyectos a {
   text-decoration: none;
+}
+.containerProyectos .p-1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.containerProyectos .p-2{
+  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 /* details */
@@ -1174,7 +1183,11 @@ body {
     display: inline-block;
     padding: 10px 0px;
   }
-
+  /* proyects */
+  .containerProyectos .p-1{
+    margin-top: -20;
+    margin-bottom: 20px;
+  }
   /* main */
   .box-technologies div {
     margin: 0px 0px;
