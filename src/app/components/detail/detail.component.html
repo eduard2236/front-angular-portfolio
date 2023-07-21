@@ -8,8 +8,10 @@
         </div>
         <div class="texto">
             <div>
-                <h2>tipo de desarrollo</h2>
-                <p>{{project.category}}</p>
+                <h2>Se puede Visualizar</h2>
+                
+                <p *ngIf="project.category != 'No esta publicada'"><a href="{{project.category}}">{{project.category}}</a></p>
+                <p *ngIf="project.category == 'No esta publicada'">{{project.category}}</p>
             </div>
             <h2>lenguajes utilizados</h2>
             <p>{{project.langs}}</p>

@@ -74,6 +74,7 @@ export class AppComponent implements OnInit{
         if($(window).width() > 683) {
           $('.navPrincipal>ul').css('display','grid ')    
           $('.navPrincipal .ed-img').css('display','grid')
+          $('#menu-movil').slideUp('fast')
         }else{
           $('.navPrincipal>ul').css('display','none')
           $('.navPrincipal .ed-img').css('display','none')

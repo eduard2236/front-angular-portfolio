@@ -314,7 +314,15 @@ body {
 .ed-img{
   margin-left: 0px;
   width: 110px;
-  transition: all 0.5s;
+  transition: all 0.5s ;
+  transform-style: preserve-3d;
+}
+
+.img-eda{
+  display: block;
+}
+.img-eda:hover .ed-img{
+  transform: rotateY(360deg);
 }
 #menu-movil{
   display: none;
